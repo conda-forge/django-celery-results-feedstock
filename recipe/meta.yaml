@@ -1,6 +1,6 @@
 {% set name = "django-celery-results" %}
 {% set url_name = "django_celery_results" %}
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ url_name[0] }}/{{ url_name }}/{{ url_name }}-{{ version }}.tar.gz
-  sha256: cc0285090a306f97f1d4b7929ed98af0475bf6db2568976b3387de4fbe812edc
+  sha256: 203cf7321081d09be91738aff715c97bcc769db8c727621049e2786118059dac
 
 build:
   number: 0
