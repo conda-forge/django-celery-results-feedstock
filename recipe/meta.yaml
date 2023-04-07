@@ -23,7 +23,7 @@ requirements:
   run:
     - celery >=5.2.3,<6.0
     - python >=3.6
-    - django >=2.2,<4.1
+    - django >=3.2
 
 test:
   commands:
