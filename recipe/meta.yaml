@@ -1,6 +1,6 @@
 {% set name = "django-celery-results" %}
 {% set url_name = "django_celery_results" %}
-{% set version = "2.3.1" %}
+{% set version = "2.5.0" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ url_name[0] }}/{{ url_name }}/{{ url_name }}-{{ version }}.tar.gz
-  sha256: bf24ecc29c42e49cc7eb30b9b3739471331e2a0ca517cc88ca53a0cf3a2031d1
+  sha256: 8631fd68158c41afddfc378840ecee2f10ddd7d4879e964f2597f483e4203269
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
   run:
     - celery >=5.2.3,<6.0
     - python >=3.6
-    - django >=2.2,<4.1
+    - django >=3.2
 
 test:
   commands:

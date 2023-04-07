@@ -1,11 +1,11 @@
-About django-celery-results
-===========================
+About django-celery-results-feedstock
+=====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/django-celery-results-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/celery/django-celery-results
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/django-celery-results-feedstock/blob/main/LICENSE.txt)
 
 Summary: Celery result backends for Django.
 
