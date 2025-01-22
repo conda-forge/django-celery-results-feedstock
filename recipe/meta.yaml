@@ -20,6 +20,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - celery >=5.2.3,<6.0
     - python >={{ python_min }}
