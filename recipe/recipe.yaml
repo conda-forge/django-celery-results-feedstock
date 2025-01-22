@@ -27,12 +27,11 @@ requirements:
     - django >=3.2
 
 tests:
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+  - python:
+      imports:
+        - django_celery_results
+      pip_check: true
+      python_version: ${{ python_min }}.*
 
 about:
   summary: Celery result backends for Django.
