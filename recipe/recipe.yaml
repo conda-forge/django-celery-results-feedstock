@@ -1,20 +1,20 @@
+schema_version: 1
+
 context:
-  name: django-celery-results
-  url_name: django_celery_results
-  version: 2.5.1
+  version: "2.6.0"
 
 package:
-  name: ${{ name|lower }}
+  name: django-celery-results
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ url_name[0] }}/${{ url_name }}/${{ url_name }}-${{ version }}.tar.gz
-  sha256: 3ecb7147f773f34d0381bac6246337ce4cf88a2ea7b82774ed48e518b67bb8fd
+  url: https://pypi.org/packages/source/d/django-celery-results/django_celery_results-${{ version }}.tar.gz
+  sha256: 9abcd836ae6b61063779244d8887a88fe80bbfaba143df36d3cb07034671277c
 
 build:
-  number: 2
+  number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -22,24 +22,28 @@ requirements:
     - python ${{ python_min }}.*
     - setuptools
   run:
-    - celery >=5.2.3,<6.0
     - python >=${{ python_min }}
-    - django >=3.2
+    - celery >=5.2.7,<6.0
+    - django >=3.2.25
 
 tests:
   - python:
       imports:
         - django_celery_results
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Celery result backends for Django.
   license: BSD-3-Clause
   license_file: LICENSE
   homepage: https://github.com/celery/django-celery-results
+  documentation: https://django-celery-results.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
     - MichelML
     - hadim
+    - mgorny
