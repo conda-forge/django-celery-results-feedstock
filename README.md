@@ -9,6 +9,8 @@ Package license: BSD-3-Clause
 
 Summary: Celery result backends for Django.
 
+Documentation: https://django-celery-results.readthedocs.io/en/latest/
+
 Current build status
 ====================
 
@@ -146,4 +148,5 @@ Feedstock Maintainers
 
 * [@MichelML](https://github.com/MichelML/)
 * [@hadim](https://github.com/hadim/)
+* [@mgorny](https://github.com/mgorny/)
 
